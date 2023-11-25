@@ -32,8 +32,8 @@ for permutacao in permutations(pontos_entrega):
         rota.append((permutacao[i], permutacao[i + 1], custo_entre_letras))
 
 #como nao tem como fazer a posição do ultimo termo "ultimo elemento" +1 no append anterior, para fazer a distancia dele com "R" adiciono diretamnete a distancia de R para R  
-    custo_total += calcular_distancia(posicoes_letras[permutacao[-1]], posicoes_letras['R'])  # Custo para voltar ao 'R'
-    rota.append((permutacao[-1], 'R', calcular_distancia(posicoes_letras[permutacao[-1]], posicoes_letras['R'])))  # Adicionando o último trecho
+    custo_total += calcular_distancia(posicoes_letras[permutacao[-1]], posicoes_letras['R'])  
+    rota.append((permutacao[-1], 'R', calcular_distancia(posicoes_letras[permutacao[-1]], posicoes_letras['R'])))  
     resultados.append((rota, custo_total))
 
 #encontrando a melhor rota
